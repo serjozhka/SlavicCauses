@@ -3,9 +3,13 @@ This folder contains the data and script that I used for the "Nominal causal con
 Raw data are in slavic_nominal_causes_2020_01_full_231_contexts_11_lgs.xlsx
 This file contains 231 parallel contexts in 11 Slavic languages. Each row corresponds to a parallel context and has a conventional number used for reference purposes.
 Examples are tagged by
+
 - whether or not they contains a nominal causal construction
+
 - which causal  marker is used
+
 - in most cases, markers are tagged by the cognacy class of markers.
+
 NB: this is an .xlsx file, these data cannot be read by R because of the problems with the Cyrillic script.
 
 The main spreadsheet is slavic_nominal causes_2020_01_markers_231_contexts_11_lgs.csv
