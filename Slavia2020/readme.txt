@@ -8,7 +8,7 @@ Examples are tagged by
 
 - which causal  marker is used
 
-- in most cases, markers are tagged by the cognacy class of markers.
+- in most cases, markers are tagged by the cognacy class.
 
 NB: this is an .xlsx file, these data cannot be read by R because of the problems with the Cyrillic script.
 
