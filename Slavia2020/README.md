@@ -2,7 +2,7 @@ This folder contains the data and script that I used for the "Nominal causal con
 
 The data were analyzed in R to built MDS-visualizations. The script is in MDS_between_Slavic_causal_contexts.R
 
-The data used for this paper are stored in three files saved as .zip archive.
+The data used for this paper are stored in slavic_nominal_causes_2020_01.zip archive.
 
 1) Raw data are in slavic_nominal_causes_2020_01_full_231_contexts_11_lgs.xlsx.
 This file contains 231 parallel contexts in 11 Slavic languages. Each row corresponds to a parallel context and has a conventional number used for reference purposes.
@@ -11,7 +11,7 @@ Examples are tagged by
 - which causal  marker is used
 - in most cases, markers are tagged by the cognacy class of markers.
 
-NB: this is an .xlsx file, these data cannot be read by R because of the problems with the Cyrillic script.
+NB: this is an .xlsx file, these data cannot be read by R because of the problems with the Cyrillic script. If you want to read these data, go to 
 
 2) The main spreadsheet is slavic_nominal causes_2020_01_markers_231_contexts_11_lgs.csv
 This file contains only rows with conventional numbers for contetxs and causal markers used in the 11 lgs.
