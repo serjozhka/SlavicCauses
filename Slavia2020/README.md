@@ -11,9 +11,9 @@ Examples are tagged by
 - which causal  marker is used
 - in most cases, markers are tagged by the cognacy class of markers.
 
-NB: this is an .xlsx file, these data cannot be read by R because of the problems with the Cyrillic script. If you want to read these data, go to 
+NB: this is an .xlsx file, open it in Excel. These data cannot be directly read by R because of the problems with the Cyrillic script. If you want to read these data in R, go to slavic_nominal_causes_2020_01_full_231_contexts_11_lgs.csv.
 
-2) The main spreadsheet is slavic_nominal causes_2020_01_markers_231_contexts_11_lgs.csv
+2) The main spreadsheet is slavic_nominal causes_2020_01_markers_231_contexts_11_lgs.csv.
 This file contains only rows with conventional numbers for contetxs and causal markers used in the 11 lgs.
 
 3) The results of the MDS-analysis (coordinates) are saved in slavic_nominal_causes_2020_01_MDS_coordinates.csv
