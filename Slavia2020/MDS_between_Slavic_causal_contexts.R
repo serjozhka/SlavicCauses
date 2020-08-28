@@ -3,8 +3,7 @@
 # and causal markers used in these 231 contexts in the 11 lgs
 # the actual examples can be found in a different file
 
-slavic_nominal_causes_2020_01 <- read.table(file.choose(), header = T, sep = '\t')
-
+slavic_nominal_causes_2020_01 <- read.table('slavic_nominal causes_2020_01_markers_231_contexts_11_lgs.csv', header = T, sep = '\t', encoding = 'UTF-8')
 # take the columns with data to be compared only
 
 row.names(slavic_nominal_causes_2020_01) <- slavic_nominal_causes_2020_01[,1]
@@ -67,7 +66,7 @@ plot(mds$conf)
 plot(mds$conf, type = 'n')
 
 #Add points to already existing plot, based on conditions
-points(mds$conf[slavic_nominal_causes_2020_01[,1] == 'îò',], bg = 'forestgreen', pch = 21)
+points(mds$conf[slavic_nominal_causes_2020_01[,1] == 'Ã®Ã²',], bg = 'forestgreen', pch = 21)
 
 # scenario #2
 #In order to add noise  points with identical coordinates
@@ -85,18 +84,18 @@ plot(mds_coordinates, pch = 16, cex = 0.6, xlim = c(-1.2, 1.2), ylim = c(-1.2, 1
 # for Russian data
 
 plot(mds_coordinates, type = 'n', xlim = c(-1.2, 1.2), ylim = c(-1.2, 1.2))
-points(mds_coordinates[slavic_nominal_causes_2020_01[,1] == 'îò',], pch = 20)
-points(mds_coordinates[slavic_nominal_causes_2020_01[,1] == 'èç',], pch = 17)
-points(mds_coordinates[slavic_nominal_causes_2020_01[,1] == 'èç-çà',], pch = 24)
-points(mds_coordinates[slavic_nominal_causes_2020_01[,1] == 'â_ñèëó',], pch = 8)
-points(mds_coordinates[slavic_nominal_causes_2020_01[,1] == 'áëàãîäàðéà',], pch = 10)
+points(mds_coordinates[slavic_nominal_causes_2020_01[,1] == 'Ã®Ã²',], pch = 20)
+points(mds_coordinates[slavic_nominal_causes_2020_01[,1] == 'Ã¨Ã§',], pch = 17)
+points(mds_coordinates[slavic_nominal_causes_2020_01[,1] == 'Ã¨Ã§-Ã§Ã ',], pch = 24)
+points(mds_coordinates[slavic_nominal_causes_2020_01[,1] == 'Ã¢_Ã±Ã¨Ã«Ã³',], pch = 8)
+points(mds_coordinates[slavic_nominal_causes_2020_01[,1] == 'Ã¡Ã«Ã Ã£Ã®Ã¤Ã Ã°Ã©Ã ',], pch = 10)
 
 # a subscenario for idenitification of contexts where rare prepositions are used
 names_rare_preps_ru <- names(table(slavic_nominal_causes_2020_01$Ru_PP, useNA = 'ifany')[table(slavic_nominal_causes_2020_01$Ru_PP) < 10])
 indeces_rare_preps_ru <- which(slavic_nominal_causes_2020_01$Ru_PP %in% names_rare_preps)
 points(mds_coordinates[indeces_rare_preps_ru,], pch = 4)
 
-legend(x = 'bottomleft', pch = c(19, 17, 24, 10, 8, 4), legend = c('îò', "èç", "èç-çà", "áëàãîäàðÿ", "â ñèëó", "other"), bty = 'n', cex = 0.7, pt.cex = 1)
+legend(x = 'bottomleft', pch = c(19, 17, 24, 10, 8, 4), legend = c('Ã®Ã²', "Ã¨Ã§", "Ã¨Ã§-Ã§Ã ", "Ã¡Ã«Ã Ã£Ã®Ã¤Ã Ã°Ã¿", "Ã¢ Ã±Ã¨Ã«Ã³", "other"), bty = 'n', cex = 0.7, pt.cex = 1)
 
 # for Polish data
 plot(mds_coordinates, type = 'n', xlim = c(-1.2, 1.2), ylim = c(-1.2, 1.2))
@@ -142,24 +141,24 @@ legend(x = 'bottomleft', pch = c(19, 17, 3, 4), legend = c('od', "iz", "zaradi",
 
 # for Bulgarian data
 plot(mds_coordinates, type = 'n', xlim = c(-1.2, 1.2), ylim = c(-1.2, 1.2))
-points(mds_coordinates[slavic_nominal_causes_2020_01[,11] == 'îò',], pch = 20)
-points(mds_coordinates[slavic_nominal_causes_2020_01[,11] == 'áëàãîäàðåíèå_íà',], pch = 10)
-points(mds_coordinates[slavic_nominal_causes_2020_01[,11] == 'çàðàäè',], pch = 3)
-points(mds_coordinates[slavic_nominal_causes_2020_01[,11] == 'ïîðàäè',], pch = 8)
+points(mds_coordinates[slavic_nominal_causes_2020_01[,11] == 'Ã®Ã²',], pch = 20)
+points(mds_coordinates[slavic_nominal_causes_2020_01[,11] == 'Ã¡Ã«Ã Ã£Ã®Ã¤Ã Ã°Ã¥Ã­Ã¨Ã¥_Ã­Ã ',], pch = 10)
+points(mds_coordinates[slavic_nominal_causes_2020_01[,11] == 'Ã§Ã Ã°Ã Ã¤Ã¨',], pch = 3)
+points(mds_coordinates[slavic_nominal_causes_2020_01[,11] == 'Ã¯Ã®Ã°Ã Ã¤Ã¨',], pch = 8)
 
 names_rare_preps_bg <- names(table(slavic_nominal_causes_2020_01$Bg_PP)[table(slavic_nominal_causes_2020_01$Bg_PP) < 10])
 indeces_rare_preps_bg <- which(slavic_nominal_causes_2020_01$Bg_PP %in% names_rare_preps_bg)
 
 points(mds_coordinates[indeces_rare_preps_bg,], pch = 4)
 
-legend(x = 'bottomleft', pch = c(19, 8, 3, 10, 4), legend = c('îò', "ïîðàäè", "çàðàäè", "áëàãîäàðåíèå", "other"), bty = 'n', cex = 0.7, pt.cex = 1)
+legend(x = 'bottomleft', pch = c(19, 8, 3, 10, 4), legend = c('Ã®Ã²', "Ã¯Ã®Ã°Ã Ã¤Ã¨", "Ã§Ã Ã°Ã Ã¤Ã¨", "Ã¡Ã«Ã Ã£Ã®Ã¤Ã Ã°Ã¥Ã­Ã¨Ã¥", "other"), bty = 'n', cex = 0.7, pt.cex = 1)
 
 # for Ukrainian data
 plot(mds_coordinates, type = 'n', xlim = c(-1.2, 1.2), ylim = c(-1.2, 1.2))
-points(mds_coordinates[slavic_nominal_causes_2020_01[,3] == 'â³ä',], pch = 20)
-points(mds_coordinates[slavic_nominal_causes_2020_01[,3] == 'ç',], pch = 17)
-points(mds_coordinates[slavic_nominal_causes_2020_01[,3] == 'çàâäéàêè',], pch = 10)
-points(mds_coordinates[slavic_nominal_causes_2020_01[,3] == '÷åðåç',], pch = 25)
+points(mds_coordinates[slavic_nominal_causes_2020_01[,3] == 'Ã¢Â³Ã¤',], pch = 20)
+points(mds_coordinates[slavic_nominal_causes_2020_01[,3] == 'Ã§',], pch = 17)
+points(mds_coordinates[slavic_nominal_causes_2020_01[,3] == 'Ã§Ã Ã¢Ã¤Ã©Ã ÃªÃ¨',], pch = 10)
+points(mds_coordinates[slavic_nominal_causes_2020_01[,3] == 'Ã·Ã¥Ã°Ã¥Ã§',], pch = 25)
 
 names_rare_preps_uk <- names(table(slavic_nominal_causes_2020_01$Uk_PP)[table(slavic_nominal_causes_2020_01$Uk_PP) < 10])
 indeces_rare_preps_uk <- which(slavic_nominal_causes_2020_01$Uk_PP %in% names_rare_preps_uk)
